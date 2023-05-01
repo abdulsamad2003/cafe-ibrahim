@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/build/home.css" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="flex text-white py-3.5 px-4 md:flex justify-between md:items-center bg-black w-[100%] fixed"
+    >
+      <div class="md:hidden justify-center" id="hum">
+        <div class="mt-1 bg-white h-0.5 w-6"></div>
+        <div class="mt-1 bg-white h-0.5 w-6"></div>
+        <div class="mt-1 bg-white h-0.5 w-6"></div>
+      </div>
+
+      <div
+        style="text-shadow: 0 0 10px #c47800"
+        class="logo ml-8 text-[#C47800] font-bold lg:text-2xl md:text-xl text-lg tracking-wide"
+      >
+        Cafe ibrahim
+      </div>
+
+      <div
+        id="navbar"
+        class="z-10 duration-1000 bg-black w-[50%] text-center h-[100vh] lg:space-x-4 lg:text-lg md:text-sm md:space-x-3 md:flex md:relative absolute sm:bg-black md:w-auto md:p-0 sm:h-screen md:h-auto md:left-0 -left-96 py-8"
+      >
+        <div>
+          <a
+            href="#home"
+            class="mb-10 hover:tracking-[.15em] hover:text-[#c47800] hover:font-bold"
+            >Home</a
+          >
+        </div>
+        <div>
+          <a
+            href="#Drinks"
+            class="hover:tracking-[.15em] hover:text-[#c47800] hover:font-bold"
+            >Drinks</a
+          >
+        </div>
+        <div>
+          <a
+            href="#Shawrama"
+            class="hover:tracking-[.15em] hover:text-[#c47800] hover:font-bold"
+            >Shawrama</a
+          >
+        </div>
+        <div>
+          <a
+            href="#breakfast"
+            class="hover:tracking-[.15em] hover:text-[#c47800] hover:font-bold"
+            >Breakfast</a
+          >
+        </div>
+        <div>
+          <a
+            href="#review"
+            class="hover:tracking-[.15em] hover:text-[#c47800] hover:font-bold"
+            >Reviews</a
+          >
+        </div>
+        <div>
+          <a
+            href="#contact"
+            class="hover:tracking-[.15em] hover:text-[#c47800] hover:font-bold"
+            >Contacts</a
+          >
+        </div>
+
+        <div
+          id="cancel"
+          class="md:hidden bx bx-x absolute text-3xl -top-1 right-4"
+        ></div>
+      </div>
+
+      <div class="flex pr-0 md:mr-9 space-x-4 lg:space-x-7">
+        <div id="search">
+          <i class="bx bx-search text-2xl hover:text-[#c47800]"></i>
+        </div>
+
+        <div id="cart" class="">
+          <i class="bx bx-cart text-2xl hover:text-[#c47800]"></i>
+        </div>
+      </div>
+      <div
+        id="search-bar"
+        class="search-bar hidden w-[100%] absolute top-16 right-11"
+      >
+        <div class="items-center ml-24 w-[90%] bg-white h-[3rem] flex">
+          <input
+            type="search"
+            id="search-box"
+            placeholder="Search Here..."
+            onkeyup="searchItem()"
+            class="h-[100%] outline-none w-[100%] text-base sm:text-[1.2rem] text-black p-[1rem]"
+          />
+          <label
+            id="cancel-seach-bar"
+            for="search-box"
+            class="text-slate-900 hover:text-[#c47800] bx bx-x items-center justify-center cursor-pointer mt-1.5 mr-4 text-[1.6rem]"
+          ></label>
+          <label for="cancel"></label>
+        </div>
+      </div>
+    </div>
+
+    <section
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+          url(/build/img/WhatsApp\ Image\ 2023-02-19\ at\ 8.55.20\ PM.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      "
+      id="home"
+      class="h-[100vh] w-[100%] bg-no-repeat bg-cover justify-center md:text-left"
+    >
+      <div class="container py-32 sm:py-40 lg:py-60 text-center">
+        <h1
+          style="text-shadow: 0 0 10px #c47800"
+          class="mx-auto lg:text-4xl text-xl sm:text-2xl md:text-3xl font-bold w-[100%] text-[#C47800]"
+        >
+          WELCOME TO CAFE IBRAHIM
+        </h1>
+        <p class="mx-auto w-[100%] md:w-[70%] text-white mt-2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+          voluptatem, architecto a dolorem quibusdam est mollitia perferendis
+          soluta quam neque!
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-black pt-32 h-full id" id="Drinks">
+      <div
+        class="heading text-center text-[#c47800] text-xl md:text-2xl lg:text-3xl font-bold tracking-wide"
+      >
+        <h1 style="text-shadow: 0 0 10px #c47800" class="hover:underline">
+          DRINKS AND CHAI
+        </h1>
+      </div>
+
+      <div
+        id="drink-items"
+        class="text-white w-fit grid pt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mx-auto py-6"
+      >
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="drink-products group rounded-lg border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830]"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Irani chai
+          </h2>
+          <div>$12/25</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="drink-products group border-[#c47800] border-2 w-60 h-64 text-center rounded-lg py-10 hover:bg-[#c47830]"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Special Tea
+          </h2>
+          <div>$17/28</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="drink-products group border-[#c47800] border-2 w-60 h-64 text-center rounded-lg py-10 hover:bg-[#c47830]"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Black Tea
+          </h2>
+          <div>$10/20</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="drink-products group border-[#c47800] border-2 w-60 h-64 text-center rounded-lg py-10 hover:bg-[#c47830]"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Green Tea
+          </h2>
+          <div>$12/25</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="drink-products group border-[#c47800] border-2 w-60 h-64 text-center rounded-lg py-10 hover:bg-[#c47830]"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Coffee
+          </h2>
+          <div>$12/25</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black pt-32 h-full" id="Shawrama">
+      <div class="bg-[#c47800] w-full h-0.5 container mx-auto mb-16"></div>
+
+      <div
+        class="heading text-center text-[#c47800] text-xl md:text-2xl lg:text-3xl font-bold tracking-wide"
+      >
+        <h1 style="text-shadow: 0 0 10px #c47800" class="hover:underline">
+          SHAWRAMAS
+        </h1>
+      </div>
+
+      <div
+        class="text-white w-fit grid pt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mx-auto py-6"
+      >
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Classic Shawrama
+          </h2>
+          <div>$80</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Spicy Shawrama
+          </h2>
+          <div>$90</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15 em]"
+          >
+            Cheese jalapeno
+          </h2>
+          <div>$90</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            BBQ Shawrama
+          </h2>
+          <div>$90</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Open plate
+          </h2>
+          <div>$150</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="breakfast" class="bg-black pt-32 h-full">
+      <div class="bg-[#c47800] w-full h-0.5 container mx-auto mb-16"></div>
+
+      <div
+        class="heading text-center text-[#c47800] text-xl md:text-2xl lg:text-3xl font-bold tracking-wide"
+      >
+        <h1 style="text-shadow: 0 0 10px #c47800" class="hover:underline">
+          Break-fast
+        </h1>
+      </div>
+
+      <div
+        class="text-white w-fit grid pt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mx-auto py-6"
+      >
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Omelette
+          </h2>
+          <div>$50</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Masala Omelette
+          </h2>
+          <div>$70</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Cheese Omelette
+          </h2>
+          <div>$95</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Half Fry
+          </h2>
+          <div>$40</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white group-hover:rounded-lg px-4 py-1 my-2 hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          style="box-shadow: 0 0 10px #c47800"
+          class="group border-[#c47800] border-2 w-60 h-64 text-center py-10 hover:bg-[#c47830] rounded-lg"
+        >
+          <img
+            src="/build/img/download.jpeg"
+            class="m-auto h-16 rounded-full w-16"
+          />
+          <h2
+            class="text-xl text-[#c47800] pt-4 group-hover:text-white group-hover:font-bold group-hover:tracking-[.15em]"
+          >
+            Half Fry
+          </h2>
+          <div>$80</div>
+          <button
+            class="border-2 border-[#c47800] group-hover:border-white px-4 py-1 my-2 group-hover:rounded-lg hover:bg-white hover:font-bold hover:text-[#c47800]"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+
+    <script src="/build/cafe.js"></script>
+  </body>
+</html>
